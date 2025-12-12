@@ -31,10 +31,10 @@ The model treats the spectrogram as a 2D image.
 
 ```mermaid
 graph LR
-    Input[Mel-Spectogram\n(128 x Time x 1)] --> U1[UNet Block 1\n(Encoder-Decoder)]
-    U1 --> U2[UNet Block 2\n(Refinement)]
+    Input["Mel-Spectogram<br>(128 x Time x 1)"] --> U1["UNet Block 1<br>(Encoder-Decoder)"]
+    U1 --> U2["UNet Block 2<br>(Refinement)"]
     U2 --> GAP[Global Avg Pooling]
-    GAP --> Dense[Dense Prediction Layer\n(Softmax)]
+    GAP --> Dense["Dense Prediction Layer<br>(Softmax)"]
     Dense --> Output[10 Class Probabilities]
 ```
 
